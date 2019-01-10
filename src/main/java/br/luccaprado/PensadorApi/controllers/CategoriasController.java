@@ -13,13 +13,13 @@ import java.util.List;
 import static org.springframework.http.ResponseEntity.ok;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/api/categorias")
 public class CategoriasController {
 
     @Autowired
     CategoriaService categoriaService;
 
-    @GetMapping("/categorias")
+    @GetMapping
     public ResponseEntity<List<CategoriaResponse>> getCategorias() {
 
         return ok(categoriaService.getCategorias());
