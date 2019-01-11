@@ -6,5 +6,5 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ListaFrasesResponse {
-    List<Texto> lista = new ArrayList<>();
+    public List<Texto> lista = new ArrayList<>();
 }

@@ -16,7 +16,7 @@ public class CategoriaService extends BaseService {
 
 
     public List<CategoriaResponse> getCategorias(){
-        Document document = GetPensador("/frases/");
+        Document document = GetPensador("frases/");
 
         Elements elementsFull = document.getElementsByClass("block full");
         Elements elementsShort = document.getElementsByClass("block half-1");
