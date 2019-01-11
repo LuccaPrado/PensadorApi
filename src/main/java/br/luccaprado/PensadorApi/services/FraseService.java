@@ -2,6 +2,7 @@ package br.luccaprado.PensadorApi.services;
 
 import br.luccaprado.PensadorApi.model.entities.Autor;
 import br.luccaprado.PensadorApi.model.entities.Texto;
+import br.luccaprado.PensadorApi.model.interfaces.Conecta;
 import br.luccaprado.PensadorApi.model.responses.ListaFrasesResponse;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -38,10 +39,16 @@ public class FraseService extends BaseService  {
         texto.setTexto(elemento.getElementsByTag("p").text());
         autor.setNome(elemento.getElementsByClass("autor").select("a").text());
         texto.setAutor(autor);
-        texto.setImagemUrl(elemento.getElementsByClass("linkDetailImage").attr("href"));
+        texto.setImagemUrl(getImg(elemento));
         texto.setCompartilhamentos(elemento.getElementsByClass("total-shares").text());
         listaFrasesResponse.lista.add(texto);
         return listaFrasesResponse;
+    }
+    private String getImg(Element elemento){
+        String txtUrl = elemento.getElementsByClass("linkDetailImage").attr("href");
+        Document documentFoto = GetPensador(txtUrl.replaceFirst("/", ""));
+        documentFoto
+        return null;
     }
 
 
