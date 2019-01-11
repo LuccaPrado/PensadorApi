@@ -1,2 +1,13 @@
 # PensadorApi
-Api rest para o pensador.com
+
+[![Build Status](https://travis-ci.org/LuccaPrado/PensadorApi.svg?branch=develop)](https://travis-ci.org/LuccaPrado/PensadorApi)
+
+esta é uma api rest para o pensador.com, com o intuito de treinar java.
+#### TODO
+- fazer pesquisa no pensador
+- aplicar swagger
+- ~~melhorar o readme~~ (https://dillinger.io/)
+- fazer um deploy no heroku
+- fazer login pela api
+- publicar frase pela api
+- melhorar o código
