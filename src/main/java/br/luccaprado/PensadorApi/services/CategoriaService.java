@@ -39,7 +39,7 @@ public class CategoriaService extends BaseService {
         String pai = nomepai.first().text();
         responseCategoria.nomePai = pai;
         links.forEach(link -> {
-            Categoria cat = new Categoria(link.text(), link.attr("href").replaceAll("\\\", ""););
+            Categoria cat = new Categoria(link.text(), link.attr("href").replaceAll("\\\", ""));
 
             responseCategoria.listaCat.add(cat);
 
