@@ -2,16 +2,11 @@ package br.luccaprado.PensadorApi.services;
 
 import br.luccaprado.PensadorApi.model.entities.Autor;
 import br.luccaprado.PensadorApi.model.entities.Texto;
-import br.luccaprado.PensadorApi.model.interfaces.Conecta;
 import br.luccaprado.PensadorApi.model.responses.ListaFrasesResponse;
-import com.google.common.base.Strings;
-import org.apache.commons.lang3.StringUtils;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import org.springframework.stereotype.Service;
-
-import java.util.Optional;
 
 @Service
 public class FraseService extends BaseService  {
