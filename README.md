@@ -7,7 +7,7 @@ Develop: [![Build Status](https://travis-ci.org/LuccaPrado/PensadorApi.svg?branc
 esta é uma api rest para o pensador.com, com o intuito de treinar java.
 #### TODO
 - fazer pesquisa no pensador
-- mapear usuário
+- mapear url autor
 - ~~aplicar swagger~~
 - ~~melhorar o readme~~ (https://dillinger.io/)
 - ~~fazer um deploy no heroku~~ (https://pensadorapi.herokuapp.com/swagger-ui.html)
