@@ -44,18 +44,25 @@ public class FraseService extends BaseService  {
         return listaFrasesResponse;
     }
     private String getImg(Element elemento){
-        String txtUrl = elemento.getElementsByClass("linkDetailImage").attr("href");
-        Document documentFoto = GetPensador(txtUrl.replaceFirst("/", ""));
-        String urlFoto;
-        Element eleFoto = documentFoto.getElementsByAttributeValue("itemprop","image").first();
-        if(eleFoto == null){
-            Element novaFoto = elemento.getElementsByTag("img").first();
-            urlFoto = novaFoto.absUrl("src");
-        }else{
-            urlFoto= eleFoto.absUrl("src");
+        try {
+
+
+            String txtUrl = elemento.getElementsByClass("linkDetailImage").attr("href");
+            Document documentFoto = GetPensador(txtUrl.replaceFirst("/", ""));
+            String urlFoto;
+            Element eleFoto = documentFoto.getElementsByAttributeValue("itemprop", "image").first();
+            if (eleFoto == null) {
+                Element novaFoto = elemento.getElementsByTag("img").first();
+                urlFoto = novaFoto.absUrl("src");
+            } else {
+                urlFoto = eleFoto.absUrl("src");
+            }
+            return urlFoto;
+        }catch (Exception e){
+            return null;
         }
 
-        return urlFoto;
+
     }
 
 
