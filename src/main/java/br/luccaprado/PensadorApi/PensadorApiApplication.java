@@ -8,6 +8,7 @@ public class PensadorApiApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(PensadorApiApplication.class, args);
+
 	}
 
 }
