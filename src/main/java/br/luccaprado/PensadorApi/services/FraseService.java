@@ -25,6 +25,14 @@ public class FraseService extends BaseService  {
         return percorre(document);
 
     }
+
+    public ListaFrasesResponse getBuscaFrases(String categoriaUrl, Integer pagenum){
+
+        Document document = GetPensador(categoriaUrl, pagenum, true);
+        return percorre(document);
+
+    }
+
     private ListaFrasesResponse percorre(Document document){
         ListaFrasesResponse listaFrasesResponse = new ListaFrasesResponse();
         Elements lista = document.getElementsByClass("thought-card");
