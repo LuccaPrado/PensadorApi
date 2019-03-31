@@ -23,8 +23,19 @@ public class BaseService implements Conecta {
 
     @Override
     public Document GetPensador(String complemento, Integer pageNumber) {
+
         try {
             return Jsoup.connect(baseUrl+complemento+"/"+pageNumber).get();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public Document GetPensador(String complemento, Integer pageNumber, Boolean pesquisa) {
+
+        try {
+            return Jsoup.connect(baseUrl+"busca.php?q="+complemento+"&?p="+pageNumber).get();
         } catch (IOException e) {
             e.printStackTrace();
         }

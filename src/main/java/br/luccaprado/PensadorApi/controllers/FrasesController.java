@@ -24,5 +24,10 @@ public class FrasesController {
     public ResponseEntity<ListaFrasesResponse> getListaFrase(@PathVariable("categoriaUrl") String categoriaUrl, @PathVariable("pagNum") Integer pagNum) {
         return ok(fraseService.getListaFrases(categoriaUrl, pagNum));
     }
+    @GetMapping("/buscar/{palavra}/{pagNum}")
+    public ResponseEntity<ListaFrasesResponse> getBuscaFrase(@PathVariable("palavra") String palavra, @PathVariable("pagNum") Integer pagNum) {
+        return ok(fraseService.getBuscaFrases(palavra, pagNum));
+    }
+
 
 }
