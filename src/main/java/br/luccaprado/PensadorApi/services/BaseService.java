@@ -35,7 +35,12 @@ public class BaseService implements Conecta {
     public Document GetPensador(String complemento, Integer pageNumber, Boolean pesquisa) {
 
         try {
-            return Jsoup.connect(baseUrl+"busca.php?q="+complemento+"&?p="+pageNumber).get();
+            Document req =Jsoup.connect(baseUrl+"busca.php?q="+complemento+"&?p="+pageNumber).get();
+            if(req.baseUri().contains("buscar.php")) {
+                return req;
+            }else {
+                return Jsoup.connect(req.baseUri()+pageNumber).get();
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }
