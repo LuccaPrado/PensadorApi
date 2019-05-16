@@ -59,8 +59,17 @@
             <artifactId>commons-text</artifactId>
             <version>1.6</version>
         </dependency>
-
-    </dependencies>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-config</artifactId>
+			<version>5.1.5.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-web</artifactId>
+			<version>5.1.5.RELEASE</version>
+		</dependency>
+	</dependencies>
 
 	<build>
 		<plugins>
